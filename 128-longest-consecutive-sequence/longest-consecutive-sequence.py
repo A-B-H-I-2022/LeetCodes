@@ -6,15 +6,11 @@ class Solution(object):
         """
         nums.sort()
         print(nums)
-        c = 1
-        a = 1
+        a,c = 1,1
         if len(nums) == 0:
             return 0
         elif len(nums) == 1:
             return 1
-        # elif len(nums) == 2 and (nums[0] == 0 and nums[1] == 0):
-        #     return 1
-
         else:
             for i in range(len(nums)-1):
                 if (nums[i+1] - nums[i]) == 1:
