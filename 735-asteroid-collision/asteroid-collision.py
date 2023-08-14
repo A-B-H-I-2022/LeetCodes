@@ -4,21 +4,29 @@ class Solution(object):
         :type asteroids: List[int]
         :rtype: List[int]
         """
-        j = 0
-        n = len(asteroids)
-
-        for i in range(n):
-            asteroid = asteroids[i]
-            while j > 0 and asteroids[j - 1] > 0 and asteroid < 0 and asteroids[j - 1] < abs(asteroid):
-                j -= 1
-
-            if j == 0 or asteroid > 0 or asteroids[j - 1] < 0:
-                asteroids[j] = asteroid
-                j += 1
-            elif asteroids[j - 1] == abs(asteroid):
-                j -= 1
-        return asteroids[:j]
-
+        stack = []
+        i,l,top = 0,len(asteroids),0
+        while i < l:
+            if asteroids[i] > 0:
+                stack.append(asteroids[i])
+            else:
+                flag = 1
+                while flag:
+                    if stack and stack[-1] > 0:
+                        top = stack[-1]
+                    else:
+                        stack.append(asteroids[i])
+                        flag = 0
+                        break
+                    if top > abs(asteroids[i]):
+                        flag = 0
+                    elif top == abs(asteroids[i]):
+                        stack.pop()
+                        flag = 0
+                    else:
+                        stack.pop()
+            i += 1
+        return stack
 
 
         # l = len(asteroids)
