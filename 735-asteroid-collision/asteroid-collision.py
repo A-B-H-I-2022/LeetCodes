@@ -27,30 +27,3 @@ class Solution(object):
                         stack.pop()
             i += 1
         return stack
-
-
-        # l = len(asteroids)
-        # i = 0
-        # if l == 0 or l == 1:
-        #     return asteroids
-        # else:
-        #     while i < len(asteroids):
-        #         if asteroids[i]<0:
-        #             if abs(asteroids[i-1]) > abs(asteroids[i]):
-        #                 asteroids.pop(i)
-        #                 i -= 1
-        #                 # l -= 1
-        #             elif abs(asteroids[i-1]) < abs(asteroids[i]):
-        #                 asteroids.pop(i-1)
-        #                 i -= 2
-        #                 # l -= 1
-        #                 if i < 0:break
-        #             else:
-        #                 asteroids.pop(i)
-        #                 asteroids.pop(i-1)
-        #                 i -= 3
-        #                 # l -= 2
-        #         # if i < l-1:
-        #         i += 1
-        #         # else:break
-        # return asteroids
