@@ -9,19 +9,13 @@ class Solution(object):
         r = len(height)-1
         while l < r:
             area= (r-l)*(min(height[l],height[r]))
-            a = max(a,area)
-            
+            a = max(a,area)  
             if (height[l]<height[r]):
                 l += 1
             else :
                 r -= 1
         return a
         
-
-
-
-
-
         
         #a = 0
         #n = []
