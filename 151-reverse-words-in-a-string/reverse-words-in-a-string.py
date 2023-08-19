@@ -4,6 +4,6 @@ class Solution(object):
         :type s: str
         :rtype: str
         """
-        s = s.strip()
+        # s = s.strip()
         s = s.split()
         return " ".join(s[::-1])
