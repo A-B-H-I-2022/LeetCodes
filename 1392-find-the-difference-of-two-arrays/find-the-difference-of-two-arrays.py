@@ -5,11 +5,12 @@ class Solution(object):
         :type nums2: List[int]
         :rtype: List[List[int]]
         """
-        lis = [[],[]]
-        for i in nums1:
-            if i not in nums2 and i not in lis[0]:
-                lis[0].append(i)
-        for j in nums2:
-            if j not in nums1 and j not in lis[1]:
-                lis[1].append(j)
-        return lis
+        return [set(nums1)-set(nums2), set(nums2)-set(nums1)]
+        # lis = [[],[]]
+        # for i in nums1:
+        #     if i not in nums2 and i not in lis[0]:
+        #         lis[0].append(i)
+        # for j in nums2:
+        #     if j not in nums1 and j not in lis[1]:
+        #         lis[1].append(j)
+        # return lis
