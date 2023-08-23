@@ -5,7 +5,8 @@ class Solution(object):
         :type coins: int
         :rtype: int
         """
-        answer = 0
+        
+        answer,count = 0,0
         ans = []
         if sum(costs) <= coins:
             return len(costs)
@@ -14,6 +15,6 @@ class Solution(object):
             for i in costs:
                 answer += i
                 if answer <= coins:
-                    ans.append(i)
+                    count += 1
                 else:break
-        return len(ans)
+        return count
