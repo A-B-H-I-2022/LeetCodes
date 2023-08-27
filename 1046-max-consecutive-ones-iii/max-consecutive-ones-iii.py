@@ -6,15 +6,15 @@ class Solution(object):
         :rtype: int
         """
         answer,l = 0,0
-        for i in range(len(nums)):
-            if nums[i] == 0:
+        for r in range(len(nums)):
+            if nums[r] == 0:
                 if k == 0:
                     while nums[l] != 0:
                         l += 1
                     l +=1 
                 else:
                     k -= 1
-            answer = max(answer, i-l+1)
+            answer = max(answer, r-l+1)
         return answer
 
 
