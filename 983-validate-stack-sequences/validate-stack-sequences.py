@@ -18,8 +18,8 @@ class Solution(object):
                     j += 1
                 else:
                     break
-        if j == l and not stack:
-            return True
-        else:
-            return False 
+        return j == l and not stack
+        #     return True
+        # else:
+        #     return False 
         
