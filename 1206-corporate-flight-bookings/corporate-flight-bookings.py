@@ -9,7 +9,7 @@ class Solution(object):
         for i, j, k in bookings:
             ans[i-1] += k
             ans[j] -= k
-        for i in xrange(1, n):
+        for i in range(1, n):
             ans[i] += ans[i - 1]
         return ans[:-1]
 
