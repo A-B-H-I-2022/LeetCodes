@@ -11,10 +11,7 @@ class Solution(object):
         for i in range(len(nums)-1):
             if nums[i] + nums[i+1] >= m:
                 flag = 1
-        if flag:
-            return True
-        else:
-            return False
+        return True if flag else False
 
 
         # l = 0
