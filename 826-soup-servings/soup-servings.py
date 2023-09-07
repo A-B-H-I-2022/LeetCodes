@@ -4,6 +4,8 @@ class Solution(object):
         :type n: int
         :rtype: float
         """
+        if n >= 5000:
+            return 1
         memo = {}
         def dfs(a, b):
             if a <= 0 and b <= 0:
@@ -24,4 +26,4 @@ class Solution(object):
             memo[(a, b)] = 0.25 * (prob_a1 + prob_a2 + prob_a3 + prob_a4)
             return memo[(a, b)]
 
-        return 1 if n >= 4800 else dfs(n, n)
+        return dfs(n, n)
