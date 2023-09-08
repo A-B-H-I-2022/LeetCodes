@@ -7,6 +7,7 @@ class Solution(object):
         a = 0
         l = 0 
         r = len(height)-1
+        h = max(height)
         while l < r:
             area= (r-l)*(min(height[l],height[r]))
             a = max(a,area)  
@@ -14,6 +15,8 @@ class Solution(object):
                 l += 1
             else :
                 r -= 1
+            if (r-l) * h <= a:
+                break 
         return a
         
         
