@@ -4,13 +4,19 @@ class Solution(object):
         :type x: int
         :rtype: bool
         """
-        y = str(x)
-        flag = 0
-        for i in range(len(y)):
-            if y[i] != y[-i-1] :
+        a = str(x)
+        b = a[::-1]
+        for i in range(len(a)):
+            if a[i] != b[i]:
                 return False
-            else:
-                flag = 0
-        if flag == 0:
-            return True
+        return True
+        # y = str(x)
+        # flag = 0
+        # for i in range(len(y)):
+        #     if y[i] != y[-i-1] :
+        #         return False
+        #     else:
+        #         flag = 1
+        # if flag:
+        #     return True
         
