@@ -4,12 +4,13 @@ class Solution(object):
         :type x: int
         :rtype: bool
         """
-        a = str(x)
-        b = a[::-1]
-        for i in range(len(a)):
-            if a[i] != b[i]:
-                return False
-        return True
+        if x<0 or (x>0 and x%10 == 0):
+            return False
+        ans = 0
+        while x > ans:
+            ans = 10*ans + x%10
+            x = x//10
+        return x == ans or x == ans//10
         # y = str(x)
         # flag = 0
         # for i in range(len(y)):
