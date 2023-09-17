@@ -4,12 +4,20 @@ class Solution(object):
         :type s: str
         :rtype: bool
         """
-        s1 = ''
-        for c in s.lower():
-            if c.isalnum():
-                s1 += c
+        # s1 = ''
+        # for c in s.lower():
+        #     if c.isalnum():
+        #         s1 += c
 
-        return True if s1==s1[::-1] else False
+        # return True if s1==s1[::-1] else False
+
+        s = re.sub(r'[^a-zA-Z0-9]', '', s).lower()
+        reversed_s = s[::-1]
+
+        if s == reversed_s:
+            return True
+
+        return False
 
         # flag = 1
         # B = ""
