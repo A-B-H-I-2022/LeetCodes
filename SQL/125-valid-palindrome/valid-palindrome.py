@@ -12,9 +12,9 @@ class Solution(object):
         # return True if s1==s1[::-1] else False
 
         s = re.sub(r'[^a-zA-Z0-9]', '', s).lower()
-        reversed_s = s[::-1]
+        reverse = s[::-1]
 
-        if s == reversed_s:
+        if s == reverse:
             return True
 
         return False
