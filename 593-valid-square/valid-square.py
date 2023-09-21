@@ -16,6 +16,6 @@ class Solution(object):
         if ans[0]==ans[1]==ans[2]==ans[3]:
             if ans[4]==ans[5]:
                 return True
-            return False
+        return False
         
         
