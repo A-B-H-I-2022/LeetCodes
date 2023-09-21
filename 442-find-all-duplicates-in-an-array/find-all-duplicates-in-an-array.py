@@ -5,15 +5,13 @@ class Solution(object):
         :rtype: List[int]
         """
         map = {}
-        lis = []
+        ans = []
+
         for i in nums:
-            if i not in map:
-                map[i] = 1
+            if i in map:
+                ans.append(i)
+                del map[i]
             else:
-                map[i] += 1
-        print(map)
-        for k,v in map.items():
-            if v == 2:
-                lis.append(k)
-        return lis
-        
+                map[i] = 0
+        return(ans)
+       
