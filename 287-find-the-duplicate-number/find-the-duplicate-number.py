@@ -4,12 +4,11 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        map = {}
-        for i in nums:
-            if i not in map:
-                map[i] = 1
-            else:
-                x = i
+        pos = 0
+        while True:
+            current = nums[pos]
+            if current == 0:
                 break
-        return x
-        
+            nums[pos] = 0
+            pos = current
+        return pos
