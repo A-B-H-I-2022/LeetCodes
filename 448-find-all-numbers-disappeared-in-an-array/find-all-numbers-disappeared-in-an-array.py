@@ -14,4 +14,12 @@ class Solution(object):
         #         ans.remove(i) 
         # return ans
 
+        num = set(nums)
+        ans = []
+        for i in range(1,len(nums)+1):
+            if i not in num:
+                ans.append(i)
+        return ans
+
+
         return set(range(1,len(nums)+1)) - set(nums)
